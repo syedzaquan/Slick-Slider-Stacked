@@ -1,0 +1,100 @@
+/* .item {
+    opacity: 0.4;
+    transition: .4s ease all;
+    margin: 0 20px;
+    transform: scale(.8);
+}
+
+@media(max-width:1000px) {
+    .item {
+        margin: 0;
+        transform: scale(.9)
+    }
+}
+
+.slick-current .item {
+    opacity: 1;
+    transform: scale(1);
+} */
+
+/* slide when not active/center*/
+.slider .slick-slide,
+.slider .slick-slide:not(.slick-cloned)~.slick-cloned[aria-hidden="true"] {
+    transform: scale(0.8);
+    transition: .4s ease all;
+    opacity: 0.4;
+    margin: 60px 0px;
+}
+
+/* slide when active/center */
+.slider .slick-center,
+.slider .slick-slide:not([tabindex="-1"])+.slick-cloned[aria-hidden="true"] {
+    transform: scale(1.2);
+    opacity: 1;
+    position: relative;
+    z-index: 15;
+    margin: 60px 0px;
+}
+
+@media only screen and (max-width: 1440px) {
+    .slider .slick-slide,
+    .slider .slick-slide:not(.slick-cloned)~.slick-cloned[aria-hidden="true"] {
+        transform: scale(0.97);
+    }
+    .slider .slick-center,
+    .slider .slick-slide:not([tabindex="-1"])+.slick-cloned[aria-hidden="true"] {
+        transform: scale(1.05);
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    .slider .slick-slide,
+    .slider .slick-slide:not(.slick-cloned)~.slick-cloned[aria-hidden="true"] {
+        transform: scale(0.95);
+    }
+    .slider .slick-center,
+    .slider .slick-slide:not([tabindex="-1"])+.slick-cloned[aria-hidden="true"] {
+        transform: scale(1.05);
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .slider .slick-center,
+    .slider .slick-slide:not([tabindex="-1"])+.slick-cloned[aria-hidden="true"] {
+        transform: scale(1.05);
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .slider .slick-slide,
+    .slider .slick-slide:not(.slick-cloned)~.slick-cloned[aria-hidden="true"] {
+        transform: scale(0.95);
+    }
+    .slider .slick-center,
+    .slider .slick-slide:not([tabindex="-1"])+.slick-cloned[aria-hidden="true"] {
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .slider .slick-slide,
+    .slider .slick-slide:not(.slick-cloned)~.slick-cloned[aria-hidden="true"] {
+        transform: scale(0.95);
+    }
+    .slider .slick-center,
+    .slider .slick-slide:not([tabindex="-1"])+.slick-cloned[aria-hidden="true"] {
+        transform: scale(1);
+    }
+}
+
+.slick-dots li button:before {
+    font-size: 22px !important;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #29AEAA !important;
+}
+
+.slick-dots li button:before {
+    opacity: 1 !important;
+}

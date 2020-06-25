@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slick JS</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+</head>
+
+<body style="padding: 60px 0px; width: 100%;">
+    <div class="slider">
+        <div class="item">
+            <a>
+                <img class="img-fluid" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/slider_bags.jpg" alt="" />
+                <div class="inner">
+                    <a>The Erling Bag</a>
+                </div>
+            </a>
+        </div>
+        <div class="item black">
+            <a>
+                <img class="img-fluid" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/slider_book_cover.jpg" alt="" />
+                <div class="inner">
+                    <a>Summer Book Series</a>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img class="img-fluid" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/slider_bags.jpg" alt="" />
+                <div class="inner">
+                    <a>The Erling Bag</a>
+                </div>
+            </a>
+        </div>
+        <div class="item black">
+            <a>
+                <img class="img-fluid" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/slider_book_cover.jpg" alt="" />
+                <div class="inner">
+                    <a>Summer Book Series</a>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img class="img-fluid" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/slider_bags.jpg" alt="" />
+                <div class="inner">
+                    <a>The Erling Bag</a>
+                </div>
+            </a>
+        </div>
+        <div class="item black">
+            <a>
+                <img class="img-fluid" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/slider_book_cover.jpg" alt="" />
+                <div class="inner">
+                    <a>Summer Book Series</a>
+                </div>
+            </a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script>
+        $('.slider').slick({
+            slidesToShow: 3,
+            autoplaySpeed: 5000,
+            rtl: false,
+            slidesToScroll: 1,
+            arrows: true,
+            infinite: true,
+            centerMode: true,
+            variableWidth: true,
+            focusOnSelect: true,
+            touchMove: true,
+            draggable: true,
+            dots: true,
+            centerPadding: '0',
+            responsive: [{
+                    breakpoint: 1025,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true,
+                        variableWidth: false
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        variableWidth: false
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        variableWidth: false
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    </script>
+</body>
+
+
+
+</html>
